@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/etNuevaTarea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nueva tarea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnAgregar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar"
+        app:layout_constraintStart_toEndOf="@id/etNuevaTarea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etNuevaTarea"
+        app:layout_constraintBottom_toBottomOf="@id/etNuevaTarea"/>
+
+    <TextView
+        android:id="@+id/tvPendientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 pendientes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNuevaTarea"
+        android:layout_marginTop="4dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTareas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPendientes"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
