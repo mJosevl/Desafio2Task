@@ -53,6 +53,8 @@ dependencies {
     // Moshi (JSON)
     implementation ("com.squareup.moshi:moshi:1.15.1")
     implementation ("com.squareup.moshi:moshi-kotlin:1.15.1")
+    implementation(libs.androidx.ui.text.android)
+    implementation(libs.protolite.well.known.types)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
